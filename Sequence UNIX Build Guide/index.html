@@ -1,0 +1,956 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.1, mkdocs-material-3.0.3">
+    
+    
+      
+        <title>Sequence build guide UNIX - Duality Solutions Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../#unix-build-notes" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Duality Solutions Documentation" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Duality Solutions Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                Sequence build guide UNIX
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Duality Solutions Documentation" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Duality Solutions Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Technology
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Technology
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fluid-protocol/" title="The Fluid Protocol" class="md-nav__link">
+      The Fluid Protocol
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Dynamic README/" title="Dynamic" class="md-nav__link">
+      Dynamic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Dynamic OSX Build Guide/" title="Dynamic build guide on OSX" class="md-nav__link">
+      Dynamic build guide on OSX
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Dynamic UNIX Build Guide/" title="Dynamic build guide on Unix" class="md-nav__link">
+      Dynamic build guide on Unix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Dynamic Initialisation Arguments/" title="Dynamic Initialisation Arguments" class="md-nav__link">
+      Dynamic Initialisation Arguments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../List of Dynamic RPC Commands/" title="Dynamic RPC Commands" class="md-nav__link">
+      Dynamic RPC Commands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Sequence README/" title="Sequence" class="md-nav__link">
+      Sequence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Sequence OSX Build Guide/" title="Sequence build guide OSX" class="md-nav__link">
+      Sequence build guide OSX
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Sequence build guide UNIX
+      </label>
+    
+    <a href="./" title="Sequence build guide UNIX" class="md-nav__link md-nav__link--active">
+      Sequence build guide UNIX
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#note" title="Note" class="md-nav__link">
+    Note
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#to-build" title="To Build" class="md-nav__link">
+    To Build
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" title="Dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-requirements" title="System requirements" class="md-nav__link">
+    System requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-build-instructions-ubuntu-debian" title="Dependency Build Instructions: Ubuntu &amp; Debian" class="md-nav__link">
+    Dependency Build Instructions: Ubuntu &amp; Debian
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies-for-the-gui-ubuntu-debian" title="Dependencies for the GUI: Ubuntu &amp; Debian" class="md-nav__link">
+    Dependencies for the GUI: Ubuntu &amp; Debian
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" title="Notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miniupnpc" title="miniupnpc" class="md-nav__link">
+    miniupnpc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#berkeley-db" title="Berkeley DB" class="md-nav__link">
+    Berkeley DB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boost" title="Boost" class="md-nav__link">
+    Boost
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" title="Security" class="md-nav__link">
+    Security
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-wallet-mode" title="Disable-wallet mode" class="md-nav__link">
+    Disable-wallet mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-build-command" title="Example Build Command" class="md-nav__link">
+    Example Build Command
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../release-notes/" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#note" title="Note" class="md-nav__link">
+    Note
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#to-build" title="To Build" class="md-nav__link">
+    To Build
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" title="Dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-requirements" title="System requirements" class="md-nav__link">
+    System requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-build-instructions-ubuntu-debian" title="Dependency Build Instructions: Ubuntu &amp; Debian" class="md-nav__link">
+    Dependency Build Instructions: Ubuntu &amp; Debian
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies-for-the-gui-ubuntu-debian" title="Dependencies for the GUI: Ubuntu &amp; Debian" class="md-nav__link">
+    Dependencies for the GUI: Ubuntu &amp; Debian
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" title="Notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miniupnpc" title="miniupnpc" class="md-nav__link">
+    miniupnpc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#berkeley-db" title="Berkeley DB" class="md-nav__link">
+    Berkeley DB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boost" title="Boost" class="md-nav__link">
+    Boost
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" title="Security" class="md-nav__link">
+    Security
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-wallet-mode" title="Disable-wallet mode" class="md-nav__link">
+    Disable-wallet mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-build-command" title="Example Build Command" class="md-nav__link">
+    Example Build Command
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="unix-build-notes">UNIX BUILD NOTES</h1>
+<p>Some notes on how to build Sequence in Unix. </p>
+<p>Building requirements for Unix based Systems :  3GB</p>
+<h2 id="note">Note</h2>
+<p>Always use absolute paths to configure and compile Sequence and the dependencies,
+for example, when specifying the the path of the dependency:</p>
+<pre><code>../dist/configure --enable-cxx --disable-shared --with-pic --prefix=$BDB_PREFIX
+</code></pre>
+<p>Here BDB_PREFIX must absolute path - it is defined using $(pwd) which ensures
+the usage of the absolute path.</p>
+<h2 id="to-build">To Build</h2>
+<pre><code class="bash">./autogen.sh
+./configure
+make
+make install # optional
+</code></pre>
+
+<p>This will build sequence-qt as well if the dependencies are met.</p>
+<h2 id="dependencies">Dependencies</h2>
+<p>These dependencies are required:</p>
+<table>
+<thead>
+<tr>
+<th>Library</th>
+<th>Purpose</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>libssl</td>
+<td>SSL Support</td>
+<td>Secure communications</td>
+</tr>
+<tr>
+<td>libboost</td>
+<td>Boost</td>
+<td>C++ Library</td>
+</tr>
+</tbody>
+</table>
+<p>Optional dependencies:</p>
+<table>
+<thead>
+<tr>
+<th>Library</th>
+<th>Purpose</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>miniupnpc</td>
+<td>UPnP Support</td>
+<td>Firewall-jumping support</td>
+</tr>
+<tr>
+<td>libdb4.8</td>
+<td>Berkeley DB</td>
+<td>Wallet storage (only needed when wallet enabled)</td>
+</tr>
+<tr>
+<td>qt</td>
+<td>GUI</td>
+<td>GUI toolkit (only needed when GUI enabled)</td>
+</tr>
+<tr>
+<td>protobuf</td>
+<td>Payments in GUI</td>
+<td>Data interchange format used for payment protocol (only needed when GUI enabled)</td>
+</tr>
+<tr>
+<td>libqrencode</td>
+<td>QR codes in GUI</td>
+<td>Optional for generating QR codes (only needed when GUI enabled)</td>
+</tr>
+</tbody>
+</table>
+<p>For the versions used in the release, see <a href="https://rawgit.com/duality-solutions/Sequence/master/doc/release-process.md">release-process.md</a> under <em>Fetch and build inputs</em>.</p>
+<h2 id="system-requirements">System requirements</h2>
+<p>C++ compilers are memory-hungry. It is recommended to have at least 1 GB of
+memory available when compiling Sequence. With 512MB of memory or less
+compilation will take much longer due to swap thrashing.</p>
+<h2 id="dependency-build-instructions-ubuntu-debian">Dependency Build Instructions: Ubuntu &amp; Debian</h2>
+<p>Build requirements:</p>
+<pre><code>sudo apt-get install git build-essential libtool autotools-dev autoconf pkg-config libssl-dev libcrypto++-dev libevent-dev
+</code></pre>
+<p>for Ubuntu 12.04 and later or Debian 7 and later libboost-all-dev has to be installed:</p>
+<pre><code>sudo apt-get install libboost-all-dev
+</code></pre>
+<p>db4.8 packages are available <a href="https://launchpad.net/~bitcoin/+archive/ubuntu/bitcoin">here</a>.
+ You can add the repository using the following command:</p>
+<pre><code>    sudo add-apt-repository ppa:bitcoin/bitcoin
+    sudo apt-get update
+</code></pre>
+<p>Ubuntu 12.04 and later have packages for libdb5.1-dev and libdb5.1++-dev,
+ but using these will break binary wallet compatibility, and is not recommended.</p>
+<p>for Debian 7 (Wheezy) and later:
+ The oldstable repository contains db4.8 packages.
+ Add the following line to /etc/apt/sources.list,
+ replacing [mirror] with any official debian mirror.</p>
+<pre><code>deb http://[mirror]/debian/ oldstable main
+</code></pre>
+<p>To enable the change run</p>
+<pre><code>sudo apt-get update
+</code></pre>
+<p>for other Debian &amp; Ubuntu (with ppa):</p>
+<pre><code>sudo apt-get install libdb4.8-dev libdb4.8++-dev
+</code></pre>
+<p>Optional:</p>
+<pre><code>sudo apt-get install libminiupnpc-dev (see --with-miniupnpc and --enable-upnp-default)
+</code></pre>
+<h2 id="dependencies-for-the-gui-ubuntu-debian">Dependencies for the GUI: Ubuntu &amp; Debian</h2>
+<p>If you want to build Sequence-Qt, make sure that the required packages for Qt development
+are installed. Qt 5 is necessary to build the GUI.
+If both Qt 4 and Qt 5 are installed, Qt 5 will be used. Pass <code>--with-gui=qt5</code> to configure to choose Qt5.
+To build without GUI pass <code>--without-gui</code>.</p>
+<p>For Qt 5 you need the following:</p>
+<pre><code>sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler libcrypto++-dev
+</code></pre>
+<p>libqrencode (optional) can be installed with:</p>
+<pre><code>sudo apt-get install libqrencode-dev
+</code></pre>
+<p>Once these are installed, they will be found by configure and a sequence-qt executable will be
+built by default.</p>
+<h2 id="notes">Notes</h2>
+<p>The release is built with GCC and then "strip sequenced" to strip the debug
+symbols, which reduces the executable size by about 90%.</p>
+<h2 id="miniupnpc">miniupnpc</h2>
+<p><a href="http://miniupnp.free.fr/">miniupnpc</a> may be used for UPnP port mapping.  It can be downloaded from <a href="http://miniupnp.tuxfamily.org/files/">here</a>.  UPnP support is compiled in and
+turned off by default.  See the configure options for upnp behavior desired:</p>
+<pre><code>--without-miniupnpc      No UPnP support miniupnp not required
+--disable-upnp-default   (the default) UPnP support turned off by default at runtime
+--enable-upnp-default    UPnP support turned on by default at runtime
+</code></pre>
+<p>To build:</p>
+<pre><code>tar -xzvf miniupnpc-1.6.tar.gz
+cd miniupnpc-1.6
+make
+sudo su
+make install
+</code></pre>
+<h2 id="berkeley-db">Berkeley DB</h2>
+<p>It is recommended to use Berkeley DB 4.8. If you have to build it yourself:</p>
+<pre><code class="bash">SEQUENCE_ROOT=$(pwd)
+
+# Pick some path to install BDB to, here we create a directory within the sequence directory
+BDB_PREFIX=&quot;${SEQUENCE_ROOT}/db4&quot;
+mkdir -p $BDB_PREFIX
+
+# Fetch the source and verify that it is not tampered with
+wget 'http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz'
+echo '12edc0df75bf9abd7f82f821795bcee50f42cb2e5f76a6a281b85732798364ef  db-4.8.30.NC.tar.gz' | sha256sum -c
+# -&gt; db-4.8.30.NC.tar.gz: OK
+tar -xzvf db-4.8.30.NC.tar.gz
+
+# Build the library and install to our prefix
+cd db-4.8.30.NC/build_unix/
+#  Note: Do a static build so that it can be embedded into the exectuable, instead of having to find a .so at runtime
+../dist/configure --prefix=/usr/local --enable-cxx
+make 
+sudo make install
+
+# Configure Sequence to use our own-built instance of BDB
+cd $SEQUENCE_ROOT
+./configure (other args...) LDFLAGS=&quot;-L${BDB_PREFIX}/lib/&quot; CPPFLAGS=&quot;-I${BDB_PREFIX}/include/&quot;
+</code></pre>
+
+<p><strong>Note</strong>: You only need Berkeley DB if the wallet is enabled (see the section <em>Disable-Wallet mode</em> below).</p>
+<h2 id="boost">Boost</h2>
+<p>If you need to build Boost yourself:</p>
+<pre><code>sudo su
+./bootstrap.sh
+./bjam install
+</code></pre>
+<h2 id="security">Security</h2>
+<p>To help make your Sequence installation more secure by making certain attacks impossible to
+exploit even if a vulnerability is found, binaries are hardened by default.
+This can be disabled with:</p>
+<p>Hardening Flags:</p>
+<pre><code>./configure --enable-hardening
+./configure --disable-hardening
+</code></pre>
+<p>Hardening enables the following features:</p>
+<ul>
+<li>
+<p>Position Independent Executable
+    Build position independent code to take advantage of Address Space Layout Randomization
+    offered by some kernels. An attacker who is able to cause execution of code at an arbitrary
+    memory location is thwarted if he doesn't know where anything useful is located.
+    The stack and heap are randomly located by default but this allows the code section to be
+    randomly located as well.</p>
+<p>On an Amd64 processor where a library was not compiled with -fPIC, this will cause an error
+such as: "relocation R_X86_64_32 against `......' can not be used when making a shared object;"</p>
+<p>To test that you have built PIE executable, install scanelf, part of paxutils, and use:</p>
+<pre><code>scanelf -e ./sequenced
+</code></pre>
+<p>The output should contain:
+ TYPE
+ET_DYN</p>
+</li>
+<li>
+<p>Non-executable Stack
+    If the stack is executable then trivial stack based buffer overflow exploits are possible if
+    vulnerable buffers are found. By default, sequence should be built with a non-executable stack
+    but if one of the libraries it uses asks for an executable stack or someone makes a mistake
+    and uses a compiler extension which requires an executable stack, it will silently build an
+    executable without the non-executable stack protection.</p>
+<p>To verify that the stack is non-executable after compiling use:
+<code>scanelf -e ./sequenced</code></p>
+<p>the output should contain:
+STK/REL/PTL
+RW- R-- RW-</p>
+<p>The STK RW- means that the stack is readable and writeable but not executable.</p>
+</li>
+</ul>
+<h2 id="disable-wallet-mode">Disable-wallet mode</h2>
+<p>When the intention is to run only a P2P node without a wallet, sequence may be compiled in
+disable-wallet mode with:</p>
+<pre><code>./configure --disable-wallet
+</code></pre>
+<p>In this case there is no dependency on Berkeley DB 4.8.</p>
+<p>Mining is also possible in disable-wallet mode, but only using the <code>getblocktemplate</code> RPC
+call not <code>getwork</code>.</p>
+<h2 id="example-build-command">Example Build Command</h2>
+<p>Qt Wallet and Deamon, CLI version build:</p>
+<pre><code>./autogen.sh &amp;&amp; ./configure --with-gui=qt5 &amp;&amp; make
+</code></pre>
+<p>CLI and Deamon Only Buld:</p>
+<pre><code>./autogen.sh &amp;&amp; ./configure --without-gui &amp;&amp; make
+</code></pre>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Sequence OSX Build Guide/" title="Sequence build guide OSX" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Sequence build guide OSX
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../faq/" title="FAQ" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                FAQ
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.583bbe55.js"></script>
+      
+      <script>app.initialize({version:"1.0.1",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

@@ -1,0 +1,904 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.1, mkdocs-material-3.0.3">
+    
+    
+      
+        <title>Dynamic Initialisation Arguments - Duality Solutions Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../#dynamic-initialisation-arguments" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Duality Solutions Documentation" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Duality Solutions Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                Dynamic Initialisation Arguments
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Duality Solutions Documentation" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Duality Solutions Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Technology
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Technology
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fluid-protocol/" title="The Fluid Protocol" class="md-nav__link">
+      The Fluid Protocol
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Dynamic README/" title="Dynamic" class="md-nav__link">
+      Dynamic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Dynamic OSX Build Guide/" title="Dynamic build guide on OSX" class="md-nav__link">
+      Dynamic build guide on OSX
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Dynamic UNIX Build Guide/" title="Dynamic build guide on Unix" class="md-nav__link">
+      Dynamic build guide on Unix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Dynamic Initialisation Arguments
+      </label>
+    
+    <a href="./" title="Dynamic Initialisation Arguments" class="md-nav__link md-nav__link--active">
+      Dynamic Initialisation Arguments
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#options" title="OPTIONS" class="md-nav__link">
+    OPTIONS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection-options" title="CONNECTION OPTIONS" class="md-nav__link">
+    CONNECTION OPTIONS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wallet-options" title="WALLET OPTIONS" class="md-nav__link">
+    WALLET OPTIONS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zeromq-notification-options" title="ZEROMQ NOTIFICATION OPTIONS" class="md-nav__link">
+    ZEROMQ NOTIFICATION OPTIONS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-testing-options" title="DEBUGGING TESTING OPTIONS" class="md-nav__link">
+    DEBUGGING TESTING OPTIONS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynode-options" title="DYNODE OPTIONS" class="md-nav__link">
+    DYNODE OPTIONS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privatesend-options" title="PRIVATESEND OPTIONS" class="md-nav__link">
+    PRIVATESEND OPTIONS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instantsend-options" title="INSTANTSEND OPTIONS" class="md-nav__link">
+    INSTANTSEND OPTIONS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node-relay-options" title="NODE RELAY OPTIONS" class="md-nav__link">
+    NODE RELAY OPTIONS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block-creation-options" title="BLOCK CREATION OPTIONS" class="md-nav__link">
+    BLOCK CREATION OPTIONS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rpc-server-options" title="RPC SERVER OPTIONS" class="md-nav__link">
+    RPC SERVER OPTIONS
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../List of Dynamic RPC Commands/" title="Dynamic RPC Commands" class="md-nav__link">
+      Dynamic RPC Commands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Sequence README/" title="Sequence" class="md-nav__link">
+      Sequence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Sequence OSX Build Guide/" title="Sequence build guide OSX" class="md-nav__link">
+      Sequence build guide OSX
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Sequence UNIX Build Guide/" title="Sequence build guide UNIX" class="md-nav__link">
+      Sequence build guide UNIX
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../release-notes/" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#options" title="OPTIONS" class="md-nav__link">
+    OPTIONS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection-options" title="CONNECTION OPTIONS" class="md-nav__link">
+    CONNECTION OPTIONS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wallet-options" title="WALLET OPTIONS" class="md-nav__link">
+    WALLET OPTIONS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zeromq-notification-options" title="ZEROMQ NOTIFICATION OPTIONS" class="md-nav__link">
+    ZEROMQ NOTIFICATION OPTIONS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-testing-options" title="DEBUGGING TESTING OPTIONS" class="md-nav__link">
+    DEBUGGING TESTING OPTIONS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynode-options" title="DYNODE OPTIONS" class="md-nav__link">
+    DYNODE OPTIONS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privatesend-options" title="PRIVATESEND OPTIONS" class="md-nav__link">
+    PRIVATESEND OPTIONS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instantsend-options" title="INSTANTSEND OPTIONS" class="md-nav__link">
+    INSTANTSEND OPTIONS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node-relay-options" title="NODE RELAY OPTIONS" class="md-nav__link">
+    NODE RELAY OPTIONS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block-creation-options" title="BLOCK CREATION OPTIONS" class="md-nav__link">
+    BLOCK CREATION OPTIONS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rpc-server-options" title="RPC SERVER OPTIONS" class="md-nav__link">
+    RPC SERVER OPTIONS
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <p><img alt="DYN logo" src="https://github.com/duality-solutions/Logos/blob/master/Duality%20Logos/Dynamic/PNG/128x128.png" /></p>
+<h1 id="dynamic-initialisation-arguments">DYNAMIC INITIALISATION ARGUMENTS</h1>
+<h2 id="options">OPTIONS</h2>
+<ul>
+<li>"-version" ("Print version and exit")</li>
+<li>"-alerts" ("Receive and display P2P network alerts (default: true)")</li>
+<li>"-alertnotify=[cmd]" ("Execute command when a relevant alert is received or we see a really long fork")</li>
+<li>"-blocknotify=[cmd]" ("Execute command when the best block changes")</li>
+<li>"-blocksonly" ("Whether to operate in a blocks only mode (default: false)")</li>
+<li>"-checkblocks=[n]" ("How many blocks to check at startup (default: 0, 0 = all)")</li>
+<li>"-checklevel=[n]" ("How thorough the block verification of -checkblocks is (0-4)")</li>
+<li>"-conf=[file]" ("Specify configuration file")</li>
+<li>"-daemon" ("Run in the background as a daemon and accept commands")</li>
+<li>"-datadir=[dir]" ("Specify data directory")</li>
+<li>"-dbcache=[n]" ("Set database cache size in megabytes")</li>
+<li>"-loadblock=[file]" ("Imports blocks from external blk000??.dat file on startup")</li>
+<li>"-maxorphantx=[n]" ("Keep at most [n] unconnectable transactions in memory")</li>
+<li>"-maxmempool=[n]" ("Keep the transaction memory pool below [n] megabytes")</li>
+<li>"-mempoolexpiry=[n]" ("Do not keep transactions in the mempool longer than [n] hours")</li>
+<li>"-par=[n]" ("Set the number of script verification threads (0 = auto)")</li>
+<li>"-pid=[file]" ("Specify pid file")</li>
+<li>"-prune=[n]" ("Reduce storage requirements by pruning (deleting) old blocks. This mode is incompatible with -txindex and -rescan. "
+            "Warning: Reverting this setting requires re-downloading the entire blockchain. "
+            "(default: 0 = disable pruning blocks")</li>
+<li>"-reindex-chainstate" ("Rebuild chain state from the currently indexed blocks")</li>
+<li>"-reindex" ("Rebuild chain state and block index from the blk*.dat files on disk")</li>
+<li>"-sysperms" ("Create new files with system default permissions, instead of umask 077 (only effective with disabled wallet functionality)")</li>
+<li>"-txindex" ("Maintain a full transaction index, used by the getrawtransaction rpc call")</li>
+<li>"-addressindex" ("Maintain a full address index, used to query for the balance, txids and unspent outputs for addresses")</li>
+<li>"-timestampindex" ("Maintain a timestamp index for block hashes, used to query blocks hashes by a range of timestamps")</li>
+<li>"-spentindex" ("Maintain a full spent index, used to query the spending txid and input index for an outpoint")</li>
+</ul>
+<h2 id="connection-options">CONNECTION OPTIONS</h2>
+<ul>
+<li>"-addnode=[ip]" ("Add a node to connect to and attempt to keep the connection open")</li>
+<li>"-banscore=[n]" ("Threshold for disconnecting misbehaving peers")</li>
+<li>"-bantime=[n]" ("Number of seconds to keep misbehaving peers from reconnecting")</li>
+<li>"-bind=[addr]" ("Bind to given address and always listen on it. Use [host]:port notation for IPv6")</li>
+<li>"-connect=[ip]" ("Connect only to the specified node(s)")</li>
+<li>"-discover" ("Discover own IP addresses (default: 1 when listening and no -externalip or -proxy)")</li>
+<li>"-dns" ("Allow DNS lookups for -addnode, -seednode and -connect")</li>
+<li>"-dnsseed" ("Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)")</li>
+<li>"-externalip=[ip]" ("Specify your own public address")</li>
+<li>"-forcednsseed" ("Always query for peer addresses via DNS lookup")</li>
+<li>"-listen" ("Accept connections from outside (default: 1 if no -proxy or -connect)")</li>
+<li>"-listenonion" ("Automatically create Tor hidden service")</li>
+<li>"-maxconnections=[n]" ("Maintain at most [n] connections to peers (temporary service connections excluded)")</li>
+<li>"-maxreceivebuffer=[n]" ("Maximum per-connection receive buffer, [n]*1000 bytes")</li>
+<li>"-maxsendbuffer=[n]" ("Maximum per-connection send buffer, [n]*1000 bytes")</li>
+<li>"-onion=[ip:port]" ("Use separate SOCKS5 proxy to reach peers via Tor hidden services")</li>
+<li>"-onlynet=[net]" ("Only connect to nodes in network [net] (ipv4, ipv6 or onion)")</li>
+<li>"-permitbaremultisig" ("Relay non-P2SH multisig")</li>
+<li>"-peerbloomfilters" ("Support filtering of blocks and transaction with bloom filters")</li>
+<li>"-enforcenodebloom" ("Enforce minimum protocol version to limit use of bloom filters")</li>
+<li>"-port=[port]" ("Listen for connections on [port]")</li>
+<li>"-proxy=[ip:port]" ("Connect through SOCKS5 proxy")</li>
+<li>"-proxyrandomize" ("Randomize credentials for every proxy connection. This enables Tor stream isolation")</li>
+<li>"-seednode=[ip]" ("Connect to a node to retrieve peer addresses, and disconnect")</li>
+<li>"-timeout=[n]" ("Specify connection timeout in milliseconds (minimum: 1)")</li>
+<li>"-torcontrol=[ip]:[port]" ("Tor control port to use if onion listening enabled")</li>
+<li>"-torpassword=[pass]" ("Tor control port password (default: empty)")</li>
+<li>"-upnp" ("Use UPnP to map the listening port (default: 1 when listening and no -proxy)")</li>
+<li>"-whitebind=[addr]" ("Bind to given address and whitelist peers connecting to it. Use [host]:port notation for IPv6")</li>
+<li>"-whitelist=[netmask]" ("Whitelist peers connecting from the given netmask or IP address. Can be specified multiple times.") +
+        " " + ("Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway")</li>
+<li>"-whitelistrelay" ("Accept relayed transactions received from whitelisted peers even when not relaying transactions")</li>
+<li>"-whitelistforcerelay" ("Force relay of transactions from whitelisted peers even they violate local relay policy")</li>
+<li>"-maxuploadtarget=[n]" ("Tries to keep outbound traffic under the given target (in MiB per 24h), 0 = no limit")</li>
+</ul>
+<h2 id="wallet-options">WALLET OPTIONS</h2>
+<ul>
+<li>"-disablewallet"("Do not load the wallet and disable wallet RPC calls")</li>
+<li>"-keypool=[n]" ("Set key pool size to [n]")</li>
+<li>"-fallbackfee=[amt]" ("A fee rate (in kB) that will be used when fee estimation has insufficient data"),</li>
+<li>"-mintxfee=[amt]" ("Fees (in kB) smaller than this are considered zero fee for transaction creation"),</li>
+<li>"-paytxfee=[amt]" ("Fee (in kB) to add to transactions you send"),</li>
+<li>"-rescan" ("Rescan the block chain for missing wallet transactions on startup")</li>
+<li>"-salvagewallet" ("Attempt to recover private keys from a corrupt wallet.dat on startup")</li>
+<li>"-sendfreetransactions" ("Send transactions as zero-fee transactions if possible")</li>
+<li>"-spendzeroconfchange" ("Spend unconfirmed change when sending transactions")</li>
+<li>"-txconfirmtarget=[n]" ("If paytxfee is not set, include enough fee so transactions begin confirmation on average within n blocks")</li>
+<li>"-maxtxfee=[amt]" ("Maximum total fees to use in a single wallet transaction setting this too low may abort large transactions"),</li>
+<li>"-usehd" ("Use hierarchical deterministic key generation (HD) after bip32. Only has effect during wallet creation/first start")</li>
+<li>"-mnemonic" ("User defined mnemonic for HD wallet (bip39). Only has effect during wallet creation/first start (default: randomly generated)")</li>
+<li>"-mnemonicpassphrase" ("User defined memonic passphrase for HD wallet (bip39). Only has effect during wallet creation/first start (default: randomly generated)")</li>
+<li>"-hdseed" ("User defined seed for HD wallet (should be in hex). Only has effect during wallet creation/first start (default: randomly generated)")</li>
+<li>"-upgradewallet" ("Upgrade wallet to latest format on startup")</li>
+<li>"-wallet=[file]" ("Specify wallet file (within data directory)")</li>
+<li>"-walletbroadcast" ("Make the wallet broadcast transactions")</li>
+<li>"-walletnotify=[cmd]" ("Execute command when a wallet transaction changes (string in cmd is replaced by TxID)")</li>
+<li>"-zapwallettxes=[mode]" ("Delete all wallet transactions and only recover those parts of the blockchain through -rescan on startup") +
+        " " + ("(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)")</li>
+<li>"-createwalletbackups=[n]" ("Number of automatic wallet backups")</li>
+<li>"-walletbackupsdir=[dir]" ("Specify full path to directory for automatic wallet backups (must exist)")</li>
+<li>"-keepass" ("Use KeePass 2 integration using KeePassHttp plugin")</li>
+<li>"-keepassport=[port]" ("Connect to KeePassHttp on port [port]")</li>
+<li>"-keepasskey=[key]" ("KeePassHttp key for AES encrypted communication with KeePass")</li>
+<li>"-keepassid=[name]" ("KeePassHttp id for the established association")</li>
+<li>"-keepassname=[name]" ("Name to construct url for KeePass entry that stores the wallet passphrase")</li>
+<li>"-windowtitle=[name]" ("Wallet window title")</li>
+</ul>
+<h2 id="zeromq-notification-options">ZEROMQ NOTIFICATION OPTIONS</h2>
+<ul>
+<li>"-zmqpubhashblock=[address]" ("Enable publish hash block in [address]")</li>
+<li>"-zmqpubhashtx=[address]" ("Enable publish hash transaction in [address]")</li>
+<li>"-zmqpubhashtxlock=[address]" ("Enable publish hash transaction (locked via InstantSend) in [address]")</li>
+<li>"-zmqpubrawblock=[address]" ("Enable publish raw block in [address]")</li>
+<li>"-zmqpubrawtx=[address]" ("Enable publish raw transaction in [address]")</li>
+<li>"-zmqpubrawtxlock=[address]" ("Enable publish raw transaction (locked via InstantSend) in [address]")</li>
+</ul>
+<h2 id="debugging-testing-options">DEBUGGING TESTING OPTIONS</h2>
+<ul>
+<li>"-uacomment=[cmt]" ("Append comment to the user agent string")</li>
+<li>"-checkblockindex" ("Do a full consistency check for mapBlockIndex, setBlockIndexCandidates, chainActive and mapBlocksUnlinked occasionally. Also sets -checkmempool")</li>
+<li>
+<ul>
+<li>"-checkmempool=[n]" ("Run checks every [n] transactions")</li>
+</ul>
+</li>
+<li>"-checkpoints" ("Disable expensive verification for known chain history")</li>
+<li>"-dblogsize=[n]" ("Flush wallet database activity from memory to disk log every [n] megabytes")</li>
+<li>"-disablesafemode" ("Disable safemode, override a real safe mode event")</li>
+<li>"-testsafemode" ("Force safe mode")</li>
+<li>"-dropmessagestest=[n]" ("Randomly drop 1 of every [n] network messages")</li>
+<li>"-fuzzmessagestest=[n]" ("Randomly fuzz 1 of every [n] network messages")</li>
+<li>"-flushwallet" ("Run a thread to flush wallet periodically")</li>
+<li>"-stopafterblockimport" ("Stop running after importing blocks from disk")</li>
+<li>"-limitancestorcount=[n]" ("Do not accept transactions if number of in-mempool ancestors is [n] or more")</li>
+<li>"-limitancestorsize=[n]" ("Do not accept transactions whose size with all in-mempool ancestors exceeds [n] kilobytes")</li>
+<li>"-limitdescendantcount=[n]" ("Do not accept transactions if any ancestor would have [n] or more in-mempool descendants")</li>
+<li>"-limitdescendantsize=[n]" ("Do not accept transactions if any ancestor would have more than [n] kilobytes of in-mempool descendants.")</li>
+</ul>
+<p>debug Categories are "addrman, alert, bench, coindb, db, http, libevent, lock, mempool, mempoolrej, net, proxy, prune, qt, rand, reindex, rpc, selectcoins, tor, zmq, Dynamic (or specifically: privatesend, instantsend, dynode, spork, keepass, dnpayments, gobject)"</p>
+<ul>
+<li>"-debug=[category]" ("Output debugging information (supplying [category] is optional)") +
+        ("If [category] is not supplied or if [category] = 1, output all debugging information.") + ("[category] can be:")</li>
+<li>"-nodebug" ("Turn off debugging messages, same as -debug=0")</li>
+<li>"-gen" ("Generate coins")</li>
+<li>"-genproclimit=[n]" ("Set the number of threads for coin generation if enabled (-1 = all cores)")</li>
+<li>"-help-debug" ("Show all debugging options (usage: --help -help-debug)")</li>
+<li>"-logips" ("Include IP addresses in debug output")</li>
+<li>"-logtimestamps" ("Prepend debug output with timestamp")</li>
+<li>"-logtimemicros" ("Add microsecond precision to debug timestamps")</li>
+<li>"-logthreadnames" ("Add thread names to debug messages")</li>
+<li>"-mocktime=[n]", ("Replace actual time with [n] seconds since epoch")</li>
+<li>"-limitfreerelay=[n]" ("Continuously rate-limit free transactions to [n]*1000 bytes per minute")</li>
+<li>"-relaypriority" ("Require high priority for relaying free or low-fee transactions")</li>
+<li>"-maxsigcachesize=[n]" ("Limit size of signature cache to [n] MiB")</li>
+<li>"-minrelaytxfee=[amt]" ("Fees (in kB) smaller than this are considered zero fee for relaying, mining and transaction creation"),</li>
+<li>"-printtoconsole" ("Send trace/debug info to console instead of debug.log file")</li>
+<li>"-printtodebuglog" ("Send trace/debug info to debug.log file")</li>
+<li>"-printpriority" ("Log transaction priority and fee per kB when mining blocks")</li>
+<li>"-privdb" ("Sets the DB_PRIVATE flag in the wallet db environment")</li>
+<li>"-shrinkdebugfile" ("Shrink debug.log file on client startup (default: 1 when no -debug)")</li>
+<li>"-litemode=[n]" ("Disable all Dynamic specific functionality (Dynodes, PrivateSend, InstantSend, Governance) (0-1)")</li>
+</ul>
+<h2 id="dynode-options">DYNODE OPTIONS</h2>
+<ul>
+<li>"-dynode=[n]" ("Enable the client to act as a Dynode (0-1)")</li>
+<li>"-dnconf=[file]" ("Specify Dynode configuration file", "dynode.conf")</li>
+<li>"-dnconflock=[n]" ("Lock Dynodes from Dynode configuration file")</li>
+<li>"-dynodeprivkey=[n]" ("Set the Dynode private key")</li>
+</ul>
+<h2 id="privatesend-options">PRIVATESEND OPTIONS</h2>
+<ul>
+<li>"-enableprivatesend=[n]" ("Enable use of automated PrivateSend for funds stored in this wallet (0-1)")</li>
+<li>"-privatesendmultisession=[n]" ("Enable multiple PrivateSend mixing sessions per block, experimental (0-1)")</li>
+<li>"-privatesendrounds=[n]" ("Use N separate Dynodes for each denominated input to mix funds (2-16)")</li>
+<li>"-privatesendamount=[n]" ("Keep N DYN anonymized")</li>
+<li>"-liquidityprovider=[n]" ("Provide liquidity to PrivateSend by infrequently mixing coins on a continual basis (0-100, 1=very frequent, high fees, 100=very infrequent, low fees)")</li>
+</ul>
+<h2 id="instantsend-options">INSTANTSEND OPTIONS</h2>
+<ul>
+<li>"-enableinstantsend=[n]" ("Enable InstantSend, show confirmations for locked transactions (0-1)")</li>
+<li>"-instantsenddepth=[n]" ("Show N confirmations for a successfully locked transaction (0-9999)")</li>
+<li>"-instantsendnotify=[cmd]" ("Execute command when a wallet InstantSend transaction is successfully locked")</li>
+</ul>
+<h2 id="node-relay-options">NODE RELAY OPTIONS</h2>
+<ul>
+<li>"-acceptnonstdtxn" ("Relay and mine \"non-standard\" transactions", "testnet/regtest only ")</li>
+<li>"-bytespersigop" ("Minimum bytes per sigop in transactions we relay and mine")</li>
+<li>"-datacarrier" ("Relay and mine data carrier transactions")</li>
+<li>"-datacarriersize" ("Maximum size of data in data carrier transactions we relay and mine")</li>
+<li>"-mempoolreplacement" ("Enable transaction replacement in the memory pool")</li>
+</ul>
+<h2 id="block-creation-options">BLOCK CREATION OPTIONS</h2>
+<ul>
+<li>"-blockminsize=[n]" ("Set minimum block size in bytes")</li>
+<li>"-blockmaxsize=[n]" ("Set maximum block size in bytes")</li>
+<li>"-blockprioritysize=[n]" ("Set maximum size of high-priority/low-fee transactions in bytes")</li>
+<li>"-blockversion=[n]" ("Override block version to test forking scenarios")</li>
+</ul>
+<h2 id="rpc-server-options">RPC SERVER OPTIONS</h2>
+<ul>
+<li>"-server" ("Accept command line and JSON-RPC commands")</li>
+<li>"-rest" ("Accept public REST requests")</li>
+<li>"-rpcbind=[addr]" ("Bind to given address to listen for JSON-RPC connections. Use [host]:port notation for IPv6. This option can be specified multiple times (default: bind to all interfaces)")</li>
+<li>"-rpccookiefile=[loc]" ("Location of the auth cookie (default: data dir)")</li>
+<li>"-rpcuser=[user]" ("Username for JSON-RPC connections")</li>
+<li>"-rpcpassword=[pw]" ("Password for JSON-RPC connections")</li>
+<li>"-rpcauth=[userpw]" ("Username and hashed password for JSON-RPC connections. The field [userpw] comes in the format: [USERNAME]:[SALT]$[HASH]. A canonical python script is included in share/rpcuser. This option can be specified multiple times")</li>
+<li>"-rpcport=[port]" ("Listen for JSON-RPC connections on [port]")</li>
+<li>"-rpcallowip=[ip]" ("Allow JSON-RPC connections from specified source. Valid for [ip] are a single IP (e.g. 1.2.3.4), a network/netmask (e.g. 1.2.3.4/255.255.255.0) or a network/CIDR (e.g. 1.2.3.4/24). This option can be specified multiple times")</li>
+<li>"-rpcthreads=[n]" ("Set the number of threads to service RPC calls")</li>
+<li>"-rpcworkqueue=[n]" ("Set the depth of the work queue to service RPC calls")</li>
+<li>"-rpcservertimeout=[n]" ("Timeout during HTTP requests")</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Dynamic UNIX Build Guide/" title="Dynamic build guide on Unix" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Dynamic build guide on Unix
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../List of Dynamic RPC Commands/" title="Dynamic RPC Commands" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Dynamic RPC Commands
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.583bbe55.js"></script>
+      
+      <script>app.initialize({version:"1.0.1",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
