@@ -312,6 +312,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#address-index" title="Address Index" class="md-nav__link">
+    Address Index
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#blockchain" title="Blockchain" class="md-nav__link">
     Blockchain
   </a>
@@ -335,6 +342,13 @@
         <li class="md-nav__item">
   <a href="#dynamic" title="Dynamic" class="md-nav__link">
     Dynamic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluid-protocol" title="Fluid Protocol" class="md-nav__link">
+    Fluid Protocol
   </a>
   
 </li>
@@ -521,6 +535,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#address-index" title="Address Index" class="md-nav__link">
+    Address Index
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#blockchain" title="Blockchain" class="md-nav__link">
     Blockchain
   </a>
@@ -544,6 +565,13 @@
         <li class="md-nav__item">
   <a href="#dynamic" title="Dynamic" class="md-nav__link">
     Dynamic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluid-protocol" title="Fluid Protocol" class="md-nav__link">
+    Fluid Protocol
   </a>
   
 </li>
@@ -616,8 +644,9 @@
                 
                 <p><img alt="DYN logo" src="https://github.com/duality-solutions/Logos/blob/master/Duality%20Logos/Dynamic/PNG/128x128.png" /></p>
 <h1 id="list-of-dynamic-rpc-commands">List of Dynamic RPC Commands</h1>
-<p>￼
-Address Index</p>
+<p>============================
+￼</p>
+<h2 id="address-index">Address Index</h2>
 <hr />
 <ul>
 <li>getaddressbalance</li>
@@ -627,6 +656,7 @@ Address Index</p>
 <li>getaddressutxos</li>
 </ul>
 <h2 id="blockchain">Blockchain</h2>
+<hr />
 <ul>
 <li>getbestblockhash</li>
 <li>getblock "hash" ( verbose )</li>
@@ -648,6 +678,7 @@ Address Index</p>
 <li>verifytxoutproof "proof"</li>
 </ul>
 <h2 id="control">Control</h2>
+<hr />
 <ul>
 <li>debug ( 0|1|addrman|alert|bench|coindb|db|lock|rand|rpc|selectcoins|mempool|mempoolrej|net|proxy|prune|http|libevent|tor|zmq|dynamic|privatesend|instantsend|dynode|spork|keepass|dnpayments|gobject )</li>
 <li>getinfo</li>
@@ -656,6 +687,7 @@ Address Index</p>
 <li>stop</li>
 </ul>
 <h2 id="ddns">DDNS</h2>
+<hr />
 <ul>
 <li>name_delete [name]</li>
 <li>name_filter [regexp] [maxage=0] [from=0] [nb=0] [stat] [valuetype]</li>
@@ -668,6 +700,7 @@ Address Index</p>
 <li>name_update [name] [value] [days] [toaddress] [valuetype]</li>
 </ul>
 <h2 id="dynamic">Dynamic</h2>
+<hr />
 <ul>
 <li>dnsync [status|next|reset]</li>
 <li>dynode "command"...</li>
@@ -682,7 +715,23 @@ Address Index</p>
 <li>spork [name] ([value])</li>
 <li>voteraw [dynode-tx-hash] [dynode-tx-index] [governance-hash] [vote-signal] (yes|no|abstain) [time] [vote-sig]</li>
 </ul>
+<h2 id="fluid-protocol">Fluid Protocol</h2>
+<hr />
+<ul>
+<li>burndynamic "amount" "account"</li>
+<li>consenttoken "address" "tokenkey"</li>
+<li>getfluidhistory</li>
+<li>getfluidhistoryraw</li>
+<li>getfluidsovereigns</li>
+<li>gettime</li>
+<li>getrawpubkey "address"</li>
+<li>maketoken "amount" "time" "receive address"</li>
+<li>sendfluidtransaction "hexstring"</li>
+<li>signtoken "address" "tokenkey"</li>
+<li>verifyquorum "tokenkey"</li>
+</ul>
 <h2 id="generating">Generating</h2>
+<hr />
 <ul>
 <li>generate numblocks</li>
 <li>getgenerate</li>
@@ -690,6 +739,7 @@ Address Index</p>
 <li>setgenerate generate ( genproclimit )</li>
 </ul>
 <h2 id="hidden">Hidden</h2>
+<hr />
 <ul>
 <li>invalidateblock "hash"</li>
 <li>name_debug</li>
@@ -698,6 +748,7 @@ Address Index</p>
 <li>setmocktime timestamp</li>
 </ul>
 <h2 id="mining">Mining</h2>
+<hr />
 <ul>
 <li>getblocktemplate ( "jsonrequestobject" )</li>
 <li>getmininginfo</li>
@@ -708,6 +759,7 @@ Address Index</p>
 <li>submitblock "hexdata" ("jsonparametersobject")</li>
 </ul>
 <h2 id="network">Network</h2>
+<hr />
 <ul>
 <li>addnode "node" "add|remove|onetry"</li>
 <li>clearbanned</li>
@@ -722,6 +774,7 @@ Address Index</p>
 <li>setban "ip(/netmask)" "add|remove" (bantime) (absolute)</li>
 </ul>
 <h2 id="raw-transactions">Raw Transactions</h2>
+<hr />
 <ul>
 <li>createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex",...} ( locktime )</li>
 <li>decoderawtransaction "hexstring"</li>
@@ -732,6 +785,7 @@ Address Index</p>
 <li>signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","redeemScript":"hex"},...] ["privatekey1",...] sighashtype )</li>
 </ul>
 <h2 id="utility-function">Utility Function</h2>
+<hr />
 <ul>
 <li>createmultisig nrequired ["key",...]</li>
 <li>estimatefee nblocks</li>
@@ -742,6 +796,7 @@ Address Index</p>
 <li>verifymessage "dynamicaddress" "signature" "message"</li>
 </ul>
 <h2 id="wallet">Wallet</h2>
+<hr />
 <ul>
 <li>abandontransaction "txid"</li>
 <li>addmultisigaddress nrequired ["key",...] ( "account" )</li>
